@@ -47,6 +47,10 @@ app.post('/api/persons', (req, res, next) => {
     .catch((error) => next(error));
 });
 
+app.get('/healthcheck', (req, res) => {
+  res.send('1'); // change this string to ensure a new version deployed
+});
+
 app.get('/info', (req, res) => {
   Person.count({}).then((count) => {
     res.send(
@@ -90,7 +94,8 @@ app.put('/api/persons/:id', (req, res, next) => {
 
 app.use(errorHandler);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4001;
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
