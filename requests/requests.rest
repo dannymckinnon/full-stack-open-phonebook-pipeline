@@ -1,0 +1,19 @@
+DELETE http://localhost:3001/api/persons/64bef8aafa
+
+###
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+  "name": "asdfasdf",
+  "number": "323-580-8062"
+}
+
+###
+PUT http://localhost:3001/api/persons/64c45988f3849457c3c3dc79
+Content-Type: application/json
+
+{
+  "name": "as",
+  "number": "343"
+}
