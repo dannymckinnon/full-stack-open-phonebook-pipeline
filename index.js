@@ -48,7 +48,7 @@ app.post('/api/persons', (req, res, next) => {
 });
 
 app.get('/healthcheck', (req, res) => {
-  res.send('2'); // change this string to ensure a new version deployed
+  res.send('ok'); // change this string to ensure a new version deployed
 });
 
 app.get('/info', (req, res) => {
